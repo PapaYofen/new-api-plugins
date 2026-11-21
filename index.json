@@ -4444,40 +4444,12 @@
       "task": true,
       "provider": false,
       "transform": false,
-      "latest": "1.0.1",
+      "latest": "1.0.0",
       "versions": [
-        {
-          "version": "1.0.1",
-          "path": "plugins/tasks/tripo/1.0.1/plugin.js",
-          "sha256": "9e2a84d48f44a77b83fa4bd3c37ed4f454ac58519fba3550d11a928e03ca98f0",
-          "minApiVersion": 1,
-          "kind": "task",
-          "baseUrl": "https://openapi.tripo3d.ai/v3",
-          "readme": {
-            "path": "plugins/tasks/tripo/README.md",
-            "sha256": "9a94315e174d33dc3bfa4d213527131b5a911d35b6d8de1895e198a9e12642aa",
-            "translations": {
-              "zh-CN": {
-                "path": "plugins/tasks/tripo/README.zh-CN.md",
-                "sha256": "d477cd9cc7aa2499674c2d9d993d216f82c7ac68b01d3d8fb5a1763d413992df"
-              }
-            }
-          },
-          "changelog": {
-            "path": "plugins/tasks/tripo/1.0.1/CHANGELOG.md",
-            "sha256": "18e756413564d146e4e15b3ef9fb0d701dce46ddf2814c4e0febda757543a3fe",
-            "translations": {
-              "zh-CN": {
-                "path": "plugins/tasks/tripo/1.0.1/CHANGELOG.zh-CN.md",
-                "sha256": "ac9e77e02fa7c32f521f255d392ad5aad56fa086ace2d18359d875228723f4e5"
-              }
-            }
-          }
-        },
         {
           "version": "1.0.0",
           "path": "plugins/tasks/tripo/1.0.0/plugin.js",
-          "sha256": "4bd4c52bd28061b97481ecdac2af5d7f7f8889b6e9b2956885e5e0160e2d6555",
+          "sha256": "55c8877295cc79e52885faab6c914929a27adaa3c6d687be2be235bbdea68162",
           "minApiVersion": 1,
           "kind": "task",
           "baseUrl": "https://openapi.tripo3d.ai/v3",
@@ -4493,11 +4465,11 @@
           },
           "changelog": {
             "path": "plugins/tasks/tripo/1.0.0/CHANGELOG.md",
-            "sha256": "d8780cfa7358a2390103365add294eb7c323b2d54fe2cb25bebce1b23f9b9795",
+            "sha256": "e95aaff0d5b003daa05a9694d1026576c6a1a1697ca3e8f9a33f651954ab0cdd",
             "translations": {
               "zh-CN": {
                 "path": "plugins/tasks/tripo/1.0.0/CHANGELOG.zh-CN.md",
-                "sha256": "d9a3ad56146ea69a6f3df192cdbc465cdf1ec1f61a170eecac30c52456ab3a2b"
+                "sha256": "8ff4e01f1b18c4b937bdb0d4850172e45ad910e33f149d37d0d5557a25d89737"
               }
             }
           }
