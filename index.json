@@ -4239,6 +4239,244 @@
       ]
     },
     {
+      "key": "tripo",
+      "name": "Tripo",
+      "icon": "text:Tr",
+      "website": "https://developers.tripo3d.ai",
+      "description": {
+        "en": "Tripo 3D generation, model processing, and file upload",
+        "zh": "Tripo 三维生成、模型加工和文件上传"
+      },
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/v3/generation/text-to-model",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/generation/image-to-model",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/generation/multiview-to-model",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/generation/image-to-splat",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/generation/text-to-image",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/generation/image-to-image",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/generation/image-to-multiview",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/generation/edit-multiview",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/generation/image-to-depth",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/models/texture",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/models/convert",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/models/import",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/mesh/segment",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/mesh/smartsegment",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/mesh/complete",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/mesh/decimate",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/mesh/uv",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/animations/rig-check",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/animations/rig",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/animations/retarget",
+          "type": "submit",
+          "decode": "createTask",
+          "render": "taskCreated"
+        },
+        {
+          "method": "GET",
+          "path": "/v3/tasks/:task_id",
+          "type": "query",
+          "render": "taskStatus",
+          "taskIdParam": "task_id"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/tasks/list",
+          "type": "dynamic",
+          "decode": "listTasks",
+          "render": "taskList"
+        },
+        {
+          "method": "POST",
+          "path": "/v3/files",
+          "type": "submit",
+          "decode": "uploadFile",
+          "render": "fileResult",
+          "retainResult": false
+        },
+        {
+          "method": "POST",
+          "path": "/v3/files/presign",
+          "type": "submit",
+          "decode": "presignFile",
+          "render": "fileResult",
+          "retainResult": false
+        }
+      ],
+      "usageSchema": {
+        "credits": {
+          "type": "number",
+          "unit": "credit",
+          "description": {
+            "en": "Tripo credit unit price",
+            "zh": "Tripo 积分单价"
+          }
+        }
+      },
+      "usageExamples": [
+        {
+          "label": "text to 3D, standard texture",
+          "facts": {
+            "credits": 20
+          }
+        }
+      ],
+      "usageProfiles": null,
+      "models": [
+        "tripo"
+      ],
+      "task": true,
+      "provider": false,
+      "transform": false,
+      "latest": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "plugins/tasks/tripo/1.0.0/plugin.js",
+          "sha256": "4bd4c52bd28061b97481ecdac2af5d7f7f8889b6e9b2956885e5e0160e2d6555",
+          "minApiVersion": 1,
+          "kind": "task",
+          "baseUrl": "https://openapi.tripo3d.ai/v3",
+          "readme": {
+            "path": "plugins/tasks/tripo/README.md",
+            "sha256": "6f485b99156cb30997190582d1dbe479de554731fc8520fbba219bbc33b38d29",
+            "translations": {
+              "zh-CN": {
+                "path": "plugins/tasks/tripo/README.zh-CN.md",
+                "sha256": "ed22a929b13f2b0f0f86dd1e6c56cffcb89f9cc21a396ad6ca2b89074655a1cb"
+              }
+            }
+          },
+          "changelog": {
+            "path": "plugins/tasks/tripo/1.0.0/CHANGELOG.md",
+            "sha256": "d8780cfa7358a2390103365add294eb7c323b2d54fe2cb25bebce1b23f9b9795",
+            "translations": {
+              "zh-CN": {
+                "path": "plugins/tasks/tripo/1.0.0/CHANGELOG.zh-CN.md",
+                "sha256": "d9a3ad56146ea69a6f3df192cdbc465cdf1ec1f61a170eecac30c52456ab3a2b"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "typesafe",
       "name": "TypeSafe",
       "icon": "text:TS",

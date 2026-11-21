@@ -1,0 +1,21 @@
+---
+changelogVersion: 1
+plugin: "tripo"
+version: "1.0.0"
+locale: "en"
+translations:
+  zh-CN: "CHANGELOG.zh-CN.md"
+---
+# Changelog
+
+## [1.0.0]
+
+### Added
+
+- Generate and process 3D models with Tripo from the gateway, including text, image, and multiview generation, texture, convert, mesh tools, rigging, and file upload.
+- Call Tripo's own paths, such as `POST /v3/generation/text-to-model`, and the same paths under `/tripo`. Poll a task at `GET /v3/tasks/{task_id}` with the gateway task id.
+- Pass a gateway task id into a follow-up request such as texture, convert, or rig. The gateway sends Tripo's id upstream.
+
+### Migration
+
+- **Price configuration:** Before enabling Tripo for users, create the model `tripo` and set its Tripo credit unit price. Requests are rejected until that price is saved.
