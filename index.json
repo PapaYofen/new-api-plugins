@@ -4444,8 +4444,36 @@
       "task": true,
       "provider": false,
       "transform": false,
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": [
+        {
+          "version": "1.0.1",
+          "path": "plugins/tasks/tripo/1.0.1/plugin.js",
+          "sha256": "9e2a84d48f44a77b83fa4bd3c37ed4f454ac58519fba3550d11a928e03ca98f0",
+          "minApiVersion": 1,
+          "kind": "task",
+          "baseUrl": "https://openapi.tripo3d.ai/v3",
+          "readme": {
+            "path": "plugins/tasks/tripo/README.md",
+            "sha256": "9a94315e174d33dc3bfa4d213527131b5a911d35b6d8de1895e198a9e12642aa",
+            "translations": {
+              "zh-CN": {
+                "path": "plugins/tasks/tripo/README.zh-CN.md",
+                "sha256": "d477cd9cc7aa2499674c2d9d993d216f82c7ac68b01d3d8fb5a1763d413992df"
+              }
+            }
+          },
+          "changelog": {
+            "path": "plugins/tasks/tripo/1.0.1/CHANGELOG.md",
+            "sha256": "18e756413564d146e4e15b3ef9fb0d701dce46ddf2814c4e0febda757543a3fe",
+            "translations": {
+              "zh-CN": {
+                "path": "plugins/tasks/tripo/1.0.1/CHANGELOG.zh-CN.md",
+                "sha256": "ac9e77e02fa7c32f521f255d392ad5aad56fa086ace2d18359d875228723f4e5"
+              }
+            }
+          }
+        },
         {
           "version": "1.0.0",
           "path": "plugins/tasks/tripo/1.0.0/plugin.js",
@@ -4455,11 +4483,11 @@
           "baseUrl": "https://openapi.tripo3d.ai/v3",
           "readme": {
             "path": "plugins/tasks/tripo/README.md",
-            "sha256": "6f485b99156cb30997190582d1dbe479de554731fc8520fbba219bbc33b38d29",
+            "sha256": "9a94315e174d33dc3bfa4d213527131b5a911d35b6d8de1895e198a9e12642aa",
             "translations": {
               "zh-CN": {
                 "path": "plugins/tasks/tripo/README.zh-CN.md",
-                "sha256": "ed22a929b13f2b0f0f86dd1e6c56cffcb89f9cc21a396ad6ca2b89074655a1cb"
+                "sha256": "d477cd9cc7aa2499674c2d9d993d216f82c7ac68b01d3d8fb5a1763d413992df"
               }
             }
           },

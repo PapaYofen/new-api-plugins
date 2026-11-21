@@ -78,7 +78,7 @@ curl https://your-gateway.example.com/v3/tasks/{task_id} \
 ## Limits
 
 - `GET /v3/account/balance`, `GET /v3/account/usage`, and `GET /v3/account/usage/history` are not served.
-- An image sent through `POST /v3/files` must be JPEG or PNG and at most 20 MB.
-- A file uploaded through the gateway is also limited by `MAX_FILE_DOWNLOAD_MB`, which defaults to 64. Larger model files should use `POST /v3/files/presign` and upload the bytes to the returned URL, which does not pass through the gateway.
+- The plugin does not reject an upload for its size. Tripo documents JPEG and PNG images at 20 MB and model files (GLB, GLTF, FBX, OBJ, STL) at 150 MB, and Tripo accepts or rejects the file.
+- A file sent through the gateway is still limited by `MAX_FILE_DOWNLOAD_MB`, which defaults to 64. That is stricter than Tripo's 150 MB model limit: a model between 64 MB and 150 MB cannot use `POST /v3/files`. Use `POST /v3/files/presign` and upload the bytes to the returned URL. That upload does not pass through the gateway.
 - `POST /v3/tasks/list` accepts 1 to 100 gateway task ids. A Tripo UUID, an empty list, or an unknown id is rejected.
 - Tripo webhooks are not used. Poll the gateway task id.

@@ -77,7 +77,7 @@ curl https://your-gateway.example.com/v3/tasks/{task_id} \
 ## 限制
 
 - `GET /v3/account/balance`、`GET /v3/account/usage`、`GET /v3/account/usage/history` 没有接入。
-- 经 `POST /v3/files` 上传的图片须为 JPEG 或 PNG，且不超过 20 MB。
-- 经网关上传的文件还受 `MAX_FILE_DOWNLOAD_MB` 限制，默认 64 MB。更大的模型文件改走 `POST /v3/files/presign`，把文件直接传到返回的地址，这一步不经过网关。
+- 插件不按文件大小拒绝上传。Tripo 文档写图片 JPEG、PNG 最大 20 MB，模型 GLB、GLTF、FBX、OBJ、STL 最大 150 MB，由 Tripo 接受或拒绝。
+- 经网关转发的文件仍受 `MAX_FILE_DOWNLOAD_MB` 限制，默认 64 MB。这比 Tripo 的模型上限 150 MB 更严：64 MB 到 150 MB 的模型不能走 `POST /v3/files`。改走 `POST /v3/files/presign`，把文件传到返回的地址。这一步不经过网关。
 - `POST /v3/tasks/list` 接受 1 到 100 个网关任务号。Tripo 的 UUID、空列表或不认识的号会被拒绝。
 - 不使用 Tripo 的 Webhook。请轮询网关任务号。
